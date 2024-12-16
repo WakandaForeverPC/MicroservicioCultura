@@ -3,9 +3,9 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar el contenido horizontalmente */
+    align-items: center;
     height: 100vh;
-    background-color: #cc8968; /* Mismo color de fondo que el contenedor */
+    background-color: #cc8968;
 }
 
 #library {
@@ -15,39 +15,39 @@ body {
     justify-content: space-between;
     gap: 20px;
     background-color: #cc8968;
-    padding: 0 10px; /* Añadir margen a los extremos */
+    padding: 0 10px;
 }
 
 .shelf {
-    width: calc(23% - 30px); /* Ajustar el ancho de las librerías */
+    width: calc(23% - 30px);
     height: 100%;
     background-color: #a66b41;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0; /* Eliminar padding para que las rows toquen los bordes */
+    padding: 0;
     border-left: 15px solid #5c361a;
     border-right: 15px solid #5c361a;
-    border-bottom: 15px solid #5c361a; /* Añadir borde inferior */
-    position: relative; /* Necesario para posicionar las patas */
+    border-bottom: 15px solid #5c361a;
+    position: relative;
 }
 
 .shelf::before,
 .shelf::after {
     content: '';
     position: absolute;
-    bottom: -15px; /* Posicionar las patas hacia abajo */
+    bottom: -15px;
     width: 15px;
     height: 15px;
     background-color: #5c361a;
 }
 
 .shelf::before {
-    left: -15px; /* Posicionar la pata izquierda */
+    left: -15px;
 }
 
 .shelf::after {
-    right: -15px; /* Posicionar la pata derecha */
+    right: -15px;
 }
 
 .card {
@@ -55,18 +55,36 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px; /* Adjust the size as needed */
-    height: 300px; /* Make the card square */
+    width: 230px;
+    height: 430px;
     background-color: white;
     border: 1px solid #ccc;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     border-radius: 15px;
+}
+
+.card p {
+    font-size: 1.5em;
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 0;
+}
+
+.card li {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 .row {
@@ -75,7 +93,7 @@ body {
     align-items: flex-end;
     height: 20%;
     border-top: 15px solid #5c361a;
-    margin: 0; /* Eliminar margen para que las rows toquen los bordes */
+    margin: 0;
 }
 
 .book {
@@ -100,7 +118,7 @@ body {
 }
 
 .floor-text {
-    font-size: 3em; /* Adjust the size as needed */
+    font-size: 3em;
     color: black;
     text-align: center;
 }
