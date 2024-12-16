@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido horizontalmente */
+    height: 100vh;
+    background-color: #cc8968; /* Mismo color de fondo que el contenedor */
+}
+
+#library {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #cc8968;
+    padding: 0 10px; /* Añadir margen a los extremos */
+}
+
+.shelf {
+    width: calc(23% - 30px); /* Ajustar el ancho de las librerías */
+    height: 100%;
+    background-color: #a66b41;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0; /* Eliminar padding para que las rows toquen los bordes */
+    border-left: 15px solid #5c361a;
+    border-right: 15px solid #5c361a;
+    border-bottom: 15px solid #5c361a; /* Añadir borde inferior */
+    position: relative; /* Necesario para posicionar las patas */
+}
+
+.shelf::before,
+.shelf::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Posicionar las patas hacia abajo */
+    width: 15px;
+    height: 15px;
+    background-color: #5c361a;
+}
+
+.shelf::before {
+    left: -15px; /* Posicionar la pata izquierda */
+}
+
+.shelf::after {
+    right: -15px; /* Posicionar la pata derecha */
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 20%;
+    border-top: 15px solid #5c361a;
+    margin: 0; /* Eliminar margen para que las rows toquen los bordes */
+}
+
+.book {
+    width: 20px;
+    background-color: #ff6347;
+    margin: 0;
+}
+
+.roof {
+    width: 100%;
+    height: 5%;
+    background-color: #cc8968;
+}
+
+.floor {
+    width: 100%;
+    height: 25%;
+    background-color: #cc8968;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floor-text {
+    font-size: 3em; /* Adjust the size as needed */
+    color: black;
+    text-align: center;
+}
